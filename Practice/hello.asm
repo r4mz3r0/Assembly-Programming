@@ -9,7 +9,7 @@ _start:
         mov rax, 1 
         mov rdi, 1
         mov rsi, message 
-        mov rdx, 14 ; Each character in the string is one byte. Add +1 to include nul \0 character
+        mov rdx, 16 ; Each character in the string is one byte. Add +1 to include nul \0 character
         syscall 
         
         move rax, 60 ; 'exit' 
