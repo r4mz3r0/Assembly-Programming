@@ -6,13 +6,13 @@ section .text
 global _start 
 
 _start: 
-        mov rax, 1 
-        mov rdi, 1
-        mov rsi, message 
+        mov rax, 1 ; r0 "accumulator" 
+        mov rdi, 1 ; destination index 
+        mov rsi, message ; Source index in string manipulation commands
         mov rdx, 17 ; Each character in the string is one byte. Add +1 to include nul \0 character
         syscall 
         
-        move rax, 60 ; 'exit' 
-        xor rdi, rdi 
+        move rax, 60 ; 'exit' "accumulator" 
+        xor rdi, rdi ; destination index
         syscall 
         
